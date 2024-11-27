@@ -105,7 +105,14 @@ This project was made as a Christmas gift for someone but I decided to post the 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Setting up Google API Access
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame1.png" alt="Logo" width="120" height="120">
+  </a>
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
