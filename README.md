@@ -112,9 +112,20 @@ The project requires a google api account to access your google photos account. 
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame1.png" alt="Logo" width="450" height="300">
+    <img src="images/walkthrough/Frame1.png" alt="Frame1" width="450" height="300">
+  </a>
+  Go to Google Cloud Api. If you are signed in, you will see the blue 'Try Google Cloud Free' button, press it and you will be prompted to create your account.
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame3.png" alt="Frame3" width="450" height="300">
   </a>
 
+
+
+
+  
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
