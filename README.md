@@ -35,14 +35,14 @@
   <p align="center">
     A digital picture frame powered by google photos api
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Mikeymac02/PiFrame"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Mikeymac02/PiFrame">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Mikeymac02/PiFrame/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Mikeymac02/PiFrame/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -55,7 +55,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#required-components">Required Components</a></li>
       </ul>
     </li>
     <li>
@@ -81,13 +81,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project was made as a Christmas gift for someone but I decided to post the code for all to use, thus is the Christmas Spirit. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
+### Required Components
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -121,7 +121,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/github_username/PiFrame.git
    ```
 3. Install NPM packages
    ```sh
@@ -133,7 +133,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin github_username/repo_name
+   git remote set-url origin github_username/PiFrame
    git remote -v # confirm the changes
    ```
 
@@ -160,7 +160,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Mikeymac02/PiFrame/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,8 +184,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/Mikeymac02/PiFrame/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Mikeymac02/PiFrame" alt="contrib.rocks image" />
 </a>
 
 
@@ -204,7 +204,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Mikeymac02/PiFrame](https://github.com/Mikeymac02/PiFrame)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,18 +223,18 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Mikeymac02/PiFrame.svg?style=for-the-badge
+[contributors-url]: https://github.com/Mikeymac02/PiFrame/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Mikeymac02/PiFrame.svg?style=for-the-badge
+[forks-url]: https://github.com/Mikeymac02/PiFrame/network/members
+[stars-shield]: https://img.shields.io/github/stars/Mikeymac02/PiFrame.svg?style=for-the-badge
+[stars-url]: https://github.com/Mikeymac02/PiFrame/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Mikeymac02/PiFrame.svg?style=for-the-badge
+[issues-url]: https://github.com/Mikeymac02/PiFrame/issues
+[license-shield]: https://img.shields.io/github/license/Mikeymac02/PiFrame.svg?style=for-the-badge
+[license-url]: https://github.com/Mikeymac02/PiFrame/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/michael-mcnamara-5095b01a0
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
