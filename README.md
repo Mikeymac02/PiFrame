@@ -38,7 +38,7 @@
   <h3 align="center">PIctureFrame</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A digital picture frame connected to the cloud!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
