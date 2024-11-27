@@ -31,7 +31,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="images/PiFrameLogo.png">
+  <a href="https://github.com/Mikeymac02/PiFrame/blob/42900e9f4c9c828dfc1bdfb906a5a6e5211550f8/images/PiFrameLogo.png">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
