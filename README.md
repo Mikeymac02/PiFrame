@@ -116,7 +116,7 @@ The project requires a google api account to access your google photos account. 
   </a>
 
   
-  Go to Google Cloud Api. If you are signed in, you will see the blue 'Try Google Cloud Free' button, press it and you will be prompted to create your account.
+Go to Google Cloud Api. If you are signed in, you will see the blue 'Try Google Cloud Free' button, press it and you will be prompted to create your account.
 
 
 <br />
@@ -125,7 +125,14 @@ The project requires a google api account to access your google photos account. 
     <img src="images/walkthrough/Frame3.png" alt="Frame3" width="450" height="300">
   </a>
 
+You will then see a blue 'New Project button on your screen, click it.
 
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame4.png" alt="Frame4" width="450" height="300">
+  </a>
 
 
   
