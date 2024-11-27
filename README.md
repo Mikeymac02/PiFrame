@@ -33,7 +33,7 @@
 <h3 align="center">PI Frame</h3>
 
   <p align="center">
-    project_description
+    A digital picture frame powered by google photos api
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
