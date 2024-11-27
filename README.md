@@ -61,7 +61,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#Setting up Google API Access">Setting up Google API Access</a></li>
+        <li><a href="#Setting-up-Google-API-Access">Setting up Google API Access</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
