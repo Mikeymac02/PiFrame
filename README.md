@@ -107,6 +107,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setting up Google API Access
 
+The project requires a google api account to access your google photos account. The next steps are how to correctly set up your api account and project.
+
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
