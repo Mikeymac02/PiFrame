@@ -103,11 +103,11 @@ This project was made as a Christmas gift for someone but I decided to post the 
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow this tutorial.
 
 ### Setting up Google API Access
 
-The project requires a google api account to access your google photos account. The next steps are how to correctly set up your api account and project.
+The project requires a Google API account to access your google photos account. The next steps are how to correctly set up your api account and project.
 
 <br />
 <div align="left">
