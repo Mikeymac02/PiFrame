@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/PiFrameLogo.png" alt="Logo" width="250" height="250">
+    <img src="images/PiFrameLogo.png" alt="Logo" width="270" height="350">
   </a>
 
 <h3 align="center">PI Frame</h3>
@@ -112,7 +112,7 @@ The project requires a google api account to access your google photos account. 
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame1.png" alt="Frame1" width="500" height="400">
+    <img src="images/walkthrough/Frame1.png" alt="Frame1" width="600" height="400">
   </a>
 
   
@@ -122,7 +122,7 @@ Go to Google Cloud Api. If you are signed in, you will see the blue 'Try Google 
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame3.png" alt="Frame3" width="500" height="400">
+    <img src="images/walkthrough/Frame3.png" alt="Frame3" width="600" height="400">
   </a>
 
 You will then see a blue 'New Project button on your screen, click it.
@@ -131,7 +131,7 @@ You will then see a blue 'New Project button on your screen, click it.
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame4.png" alt="Frame4" width="500" height="400">
+    <img src="images/walkthrough/Frame4.png" alt="Frame4" width="600" height="400">
   </a>
 
 Once you create your project, you will be presented with this dashboard. Click 'APIs & Services'
@@ -140,7 +140,7 @@ Once you create your project, you will be presented with this dashboard. Click '
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame5.png" alt="Frame5" width="500" height="400">
+    <img src="images/walkthrough/Frame5.png" alt="Frame5" width="600" height="400">
   </a>
 
 You will now see this dashboard. We need to enable the Google Photos Picker API, so we need to click '+ ENABLE APIS AND SERVICES'
@@ -149,7 +149,7 @@ You will now see this dashboard. We need to enable the Google Photos Picker API,
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame7.png" alt="Frame7" width="500" height="400">
+    <img src="images/walkthrough/Frame7.png" alt="Frame7" width="600" height="400">
   </a>
 
 Once you search 'Google Photos API', click on the result and enable it via the enable button
@@ -158,7 +158,7 @@ Once you search 'Google Photos API', click on the result and enable it via the e
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame8.png" alt="Frame8" width="500" height="400">
+    <img src="images/walkthrough/Frame8.png" alt="Frame8" width="600" height="400">
   </a>
 
 After that, we need to set up the authentication consent screen. Click 'OAuth Consent Screen' on the left bar & set the user type to be external (it will never be internal), then hit create
@@ -167,13 +167,28 @@ After that, we need to set up the authentication consent screen. Click 'OAuth Co
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame9.png" alt="Frame9" width="500" height="400">
+    <img src="images/walkthrough/Frame9.png" alt="Frame9" width="600" height="400">
   </a>
 
 Now we need to set up the credentials so your api can get authenticated and work properly. Click the 'Credentials' tab on the left, then '+ CREATE CREDENTIALS' and click 'OAuth client ID'
 
 
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame10.png" alt="Frame10" width="400" height="600">
+  </a>
 
+You will be prompted with the above creation screen. Set the Application type to be 'Web application', name your client, and set the Authorized redirect URIs to have 'https://localhost:8080/'. After that, press create.
+
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame11.png" alt="Frame11" width="500" height="400">
+  </a>
+
+After that, you'll be prompted with a confirmation screen. Make sure you hit the 'DOWNLOAD JSON' button and label the file Credentials.json, you will need to put this into your project directory.
 
 
 
