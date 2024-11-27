@@ -89,14 +89,11 @@ This project was made as a Christmas gift for someone but I decided to post the 
 
 ### Required Components
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+- Rapsberry Pi 3B/4B/5
+- A display(I am using the official Raspberry Pi 7" Touchscreen)
+- A google account
+- A mobile device
+- Internet connection
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +118,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/PiFrame.git
+   git clone https://github.com/Mikeymac02/PiFrame.git
    ```
 3. Install NPM packages
    ```sh
