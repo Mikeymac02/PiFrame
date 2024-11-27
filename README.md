@@ -112,7 +112,7 @@ The project requires a google api account to access your google photos account. 
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame1.png" alt="Frame1" width="450" height="300">
+    <img src="images/walkthrough/Frame1.png" alt="Frame1" width="500" height="400">
   </a>
 
   
@@ -122,7 +122,7 @@ Go to Google Cloud Api. If you are signed in, you will see the blue 'Try Google 
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame3.png" alt="Frame3" width="450" height="300">
+    <img src="images/walkthrough/Frame3.png" alt="Frame3" width="500" height="400">
   </a>
 
 You will then see a blue 'New Project button on your screen, click it.
@@ -131,11 +131,54 @@ You will then see a blue 'New Project button on your screen, click it.
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame4.png" alt="Frame4" width="450" height="300">
+    <img src="images/walkthrough/Frame4.png" alt="Frame4" width="500" height="400">
   </a>
 
+Once you create your project, you will be presented with this dashboard. Click 'APIs & Services'
 
-  
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame5.png" alt="Frame5" width="500" height="400">
+  </a>
+
+You will now see this dashboard. We need to enable the Google Photos Picker API, so we need to click '+ ENABLE APIS AND SERVICES'
+
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame7.png" alt="Frame7" width="500" height="400">
+  </a>
+
+Once you search 'Google Photos API', click on the result and enable it via the enable button
+
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame8.png" alt="Frame8" width="500" height="400">
+  </a>
+
+After that, we need to set up the authentication consent screen. Click 'OAuth Consent Screen' on the left bar & set the user type to be external (it will never be internal), then hit create
+
+
+<br />
+<div align="left">
+  <a href="https://github.com/Mikeymac02/PiFrame">
+    <img src="images/walkthrough/Frame9.png" alt="Frame9" width="500" height="400">
+  </a>
+
+Now we need to set up the credentials so your api can get authenticated and work properly. Click the 'Credentials' tab on the left, then '+ CREATE CREDENTIALS' and click 'OAuth client ID'
+
+
+
+
+
+
+
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
