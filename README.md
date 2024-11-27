@@ -110,7 +110,7 @@ To get a local copy up and running follow these simple example steps.
 <br />
 <div align="left">
   <a href="https://github.com/Mikeymac02/PiFrame">
-    <img src="images/walkthrough/Frame1.png" alt="Logo" width="400" height="250">
+    <img src="images/walkthrough/Frame1.png" alt="Logo" width="450" height="300">
   </a>
 
 
