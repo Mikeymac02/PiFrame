@@ -201,15 +201,13 @@ After that, you'll be prompted with a confirmation screen. Make sure you hit the
    - The first 3 imports are default with python and do not need to be installed
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+3. Now you need to put the Credentials JSON file that you generated earlier into the project folder
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Startup
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- Upon running the code, a QR Code will appear. I reccomend using the google app on your phone to scan it as it lets the photos selection be much more streamlined.
 
 See the [open issues](https://github.com/Mikeymac02/PiFrame/issues) for a full list of proposed features (and known issues).
 
