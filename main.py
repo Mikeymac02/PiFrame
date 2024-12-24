@@ -1,11 +1,11 @@
 import os
+import json
+import time
 import pickle
 import cv2
 import qrcode
 import PIL
 from PIL import Image
-import json
-import time
 import pygame
 import requests
 import google_auth_oauthlib.flow
