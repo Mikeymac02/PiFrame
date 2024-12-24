@@ -8,8 +8,6 @@ import json
 import time
 import pygame
 import requests
-import RPi.GPIO as GPIO
-import tkinter as tk
 import google_auth_oauthlib.flow
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
