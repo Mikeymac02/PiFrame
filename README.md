@@ -190,41 +190,14 @@ You will be prompted with the above creation screen. Set the Application type to
 
 After that, you'll be prompted with a confirmation screen. Make sure you hit the 'DOWNLOAD JSON' button and label the file Credentials.json, you will need to put this into your project directory.
 
-- You can either clone this repository or copy the main.py file and build the folders yourself
-  - If you clone the repository, make sure to delete all items in the "images" & "backup" folders
-  - If you only copy the main.py, you will have to create the "images" & "backup" folders in the same location of your main.py file
+
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Mikeymac02/PiFrame.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/PiFrame
-   git remote -v # confirm the changes
-   ```
+1. You can either clone this repository or copy the main.py file and build the folders yourself
+  - If you clone the repository, make sure to delete all items in the "images" & "backup" folders
+  - If you only copy the main.py, you will have to create the "images" & "backup" folders in the same location of your main.py file
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+2. You now need to install each of the dependencies
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
