@@ -17,11 +17,6 @@ from google.auth.transport.requests import Request
 # If modifying the scope, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/photospicker.mediaitems.readonly']
 
-GPIO.setmode(GPIO.BCM)
-
-#GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-
 
 def generate_qr_code(data):
     #Creates a qr code of the link to select photos
@@ -38,6 +33,7 @@ def generate_qr_code(data):
     type(qrr)
     qrr.save("selectionQR.png")
     return None
+
 
 
 def authenticate_google_photos():
@@ -63,6 +59,7 @@ def authenticate_google_photos():
     return creds
 
 
+
 def create_session(creds):
     #This function creates an api session *Maybe only run it once?
     url = 'https://photospicker.googleapis.com/v1/sessions'
@@ -72,7 +69,6 @@ def create_session(creds):
     }
 
     response = requests.post(url, headers=headers)
-
     if response.status_code == 200:
         print("Session created successfully")
         print(json.dumps(response.json(), indent=2))
@@ -82,7 +78,8 @@ def create_session(creds):
 
     response = response.json()
     return response
-    
+
+
     
 def delete_session(creds, session_id):
     url = f'https://photospicker.googleapis.com/v1/sessions/{session_id}'
@@ -91,6 +88,7 @@ def delete_session(creds, session_id):
         'Content-Type':'application/json'
     }
     response = requests.delete(url, headers=headers)
+
 
 
 def get_selected_items(creds, id_val):
@@ -115,6 +113,7 @@ def get_selected_items(creds, id_val):
     return response
 
 
+
 def download_images(item, url, token):
     #This function downloads the images to the images folder in this directory
     fileName = item.get('mediaFile', {}).get('filename')
@@ -131,6 +130,7 @@ def download_images(item, url, token):
             file.write(response.content)
         with open(backup_path, 'wb') as file:
             file.write(response.content)
+
 
 
 def wait_for_selection(creds, id):
@@ -158,6 +158,7 @@ def wait_for_selection(creds, id):
             print(f"Failed to poll session. Status code: {response.status_code}")
             break
     return None
+
 
 
 def resize_image(image, screen_width, screen_height):
@@ -189,6 +190,7 @@ def crossfade(current_image, next_image, screen):
         pygame.time.delay(1)
 
 
+
 def display_images(images, screen, screen_width, screen_height):
     clock = pygame.time.Clock()
     index = 0
@@ -216,7 +218,8 @@ def display_images(images, screen, screen_width, screen_height):
         #pygame.time.delay(5000)
         clock.tick(60)
         time.sleep(10)
-        
+
+
 
 def screen_init():
     pygame.init()
@@ -226,7 +229,8 @@ def screen_init():
     screen = pygame.display.set_mode((displayWidth, displayHeight),pygame.FULLSCREEN)
     return screen, displayWidth, displayHeight
     
-    
+
+
 def new_selection(credentials):
     session = create_session(creds)
     id_value = session.get('id')
@@ -235,14 +239,14 @@ def new_selection(credentials):
     generate_qr_code(picker_uri)
     
     newUrl = "https://photospicker.googleapis.com/v1/sessions/"+id_value+"/mediaItems"
-    
+    #-----------------------------------------------------------------------------------------------------
     screen, screenWidth, screenHeight = screen_init()
     codeDisplay = pygame.image.load("selectionQR.png")
     codeWidth, codeHeight = codeDisplay.get_size()
     codeDisplay = pygame.transform.scale(codeDisplay, (screenWidth, codeHeight-10))
     print("screen: "+str(screenHeight))
     print("code: "+str(codeHeight))
-   
+   #-------------------------------------------------------------------------------------------------------
    
    # codeDisplay = resize_image(codeDisplay, screenWidth, screenHeight)
     screen.blit(codeDisplay, (0, 120))
@@ -255,7 +259,7 @@ def new_selection(credentials):
     for item in media_items:
         base_url = item.get('mediaFile', {}).get('baseUrl')+"=d"
         download_images(item, base_url, creds.token)
-    images = [f for f in os.listdir('images') if f.endswith(('.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG', '.heic', '.HEIC'))]
+    images = [f for f in os.listdir('images') if f.endswith(('.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG', '.heic', '.HEIC', '.gif', '.GIF'))]
     screen, screenWidth, screenHeight = screen_init()
     display_images(images, screen, screenWidth, screenHeight)
     pygame.display.quit()
@@ -263,7 +267,8 @@ def new_selection(credentials):
     return None
 
 
-def delete_images():
+
+def delete_images(): #Deletes all images in the images folder on startup
     for filename in os.listdir("images"):
         file_path = os.path.join("images", filename)
         try:
