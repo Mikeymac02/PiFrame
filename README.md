@@ -190,17 +190,9 @@ You will be prompted with the above creation screen. Set the Application type to
 
 After that, you'll be prompted with a confirmation screen. Make sure you hit the 'DOWNLOAD JSON' button and label the file Credentials.json, you will need to put this into your project directory.
 
-
-
-
-
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
+- You can either clone this repository or copy the main.py file and build the folders yourself
+  - If you clone the repository, make sure to delete all items in the "images" & "backup" folders
+  - If you only copy the main.py, you will have to create the "images" & "backup" folders in the same location of your main.py file
 ### Installation
 
 1. Get a free API Key at [https://example.com](https://example.com)
