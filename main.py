@@ -53,6 +53,7 @@ def generate_qr_code(data):
     qrr.save("selectionQR.png")
     return None
 
+
 #Authenticate and authorize the user to access their Google Photos
 def authenticate_google_photos():
     creds = None
@@ -75,6 +76,7 @@ def authenticate_google_photos():
 
     return creds
 
+
 #Creates the session to pick your photos
 def create_session(creds):
     #This function creates an api session *Maybe only run it once?
@@ -95,7 +97,8 @@ def create_session(creds):
 
     response = response.json()
     return response
-    
+
+
 #Removes the session once finished to ensure we do not have session overflow   
 def delete_session(creds, session_id):
     url = f'https://photospicker.googleapis.com/v1/sessions/{session_id}'
@@ -179,6 +182,7 @@ def wait_for_selection(creds, id):
             print(f"Failed to poll session. Status code: {response.status_code}")
             break
     return None
+
 
 #Changes the mage size to the dimensions of the screen
 def resize_image(image, screen_width, screen_height):
@@ -288,7 +292,8 @@ def delete_images():
             else:
                 os.remove(file_path)
         except Exception as e:
-            print(f"Error deleting {file_path}: {e}")
+            print(f"Error deleting {file_path}: {e}")	
+    
 
 
 #Main function, will display currently saved photos [if any] or will let you select new photos if none are found
