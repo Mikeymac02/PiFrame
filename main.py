@@ -9,27 +9,34 @@ import time
 import pygame
 import requests
 import RPi.GPIO as GPIO
-import tkinter as tk
 import google_auth_oauthlib.flow
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-# If modifying the scope, delete the file token.pickle.
+
+# If modifying the scope/switching the user, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/photospicker.mediaitems.readonly']
 
 
+#This sets up physical the reset key 
 KEY_PIN = 17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(KEY_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 stop_loop = False
 
+
+#This function is the key interrupt to switch the photos
 def key_pressed_callback(channel):
     global stop_loop
     stop_loop = True
-    
+return None
+
+
+#This sets up the key_pressed_callback to work as an interrupt function
 GPIO.add_event_detect(KEY_PIN, GPIO.FALLING, callback=key_pressed_callback, bouncetime=50)
 
 
+#This function does its namesake & generates a QR Code for the selection link
 def generate_qr_code(data):
     #Creates a qr code of the link to select photos
     qr = qrcode.QRCode(
@@ -46,9 +53,8 @@ def generate_qr_code(data):
     qrr.save("selectionQR.png")
     return None
 
-
+#Authenticate and authorize the user to access their Google Photos
 def authenticate_google_photos():
-    #Authenticate and authorize the user to access their Google Photos
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first time.
@@ -69,7 +75,7 @@ def authenticate_google_photos():
 
     return creds
 
-
+#Creates the session to pick your photos
 def create_session(creds):
     #This function creates an api session *Maybe only run it once?
     url = 'https://photospicker.googleapis.com/v1/sessions'
@@ -90,7 +96,7 @@ def create_session(creds):
     response = response.json()
     return response
     
-    
+#Removes the session once finished to ensure we do not have session overflow   
 def delete_session(creds, session_id):
     url = f'https://photospicker.googleapis.com/v1/sessions/{session_id}'
     headers = {
@@ -100,8 +106,8 @@ def delete_session(creds, session_id):
     response = requests.delete(url, headers=headers)
 
 
+#Get the list of the selected images & their info
 def get_selected_items(creds, id_val):
-    #This function gets the list of the selected images & their info
     url = "https://photospicker.googleapis.com/v1/mediaItems"
     headers = {
         'Authorization': f'Bearer {creds.token}',
@@ -126,7 +132,7 @@ def wait_for_file(file_path):
         time.sleep(1)
 
 
-
+#Downloads the images selected from google photos
 def download_images(item, url, token):
     #This function downloads the images to the images folder in this directory
     fileName = item.get('mediaFile', {}).get('filename')
@@ -146,6 +152,8 @@ def download_images(item, url, token):
             file.write(response.content)
     return None
 
+
+#Waits for user to select photos on the mobile device before going forward
 def wait_for_selection(creds, id):
     #This function delays the rest of the code until the user selects their photos (Max of 2000 seconds)
     url = f"https://photospicker.googleapis.com/v1/sessions/"+id
@@ -172,7 +180,7 @@ def wait_for_selection(creds, id):
             break
     return None
 
-
+#Changes the mage size to the dimensions of the screen
 def resize_image(image, screen_width, screen_height):
     img_width, img_height = image.get_size()
     
@@ -185,23 +193,22 @@ def resize_image(image, screen_width, screen_height):
     return pygame.transform.scale(image, (new_width, new_height))
     
 
-
+#Crossfades current image & next image
 def crossfade(current_image, next_image, screen):
     alpha = 0
     while alpha < 255:
         current_image.set_alpha(255-alpha)
         next_image.set_alpha(alpha)
-        
         screen.fill((0,0,0))
         screen.blit(current_image, (0,0))
         screen.blit(next_image, (0,0))
-        
         pygame.display.flip()
         
         alpha+=5
         pygame.time.delay(10)
 
 
+#Displays the images on a loop until the key interrupt happens
 def display_images(images, screen, screen_width, screen_height):
     clock = pygame.time.Clock()
     index = 0
@@ -227,11 +234,11 @@ def display_images(images, screen, screen_width, screen_height):
         """
         #Controls how long image is on screen
         pygame.time.delay(50000)
-        clock.tick(60)
-        #time.sleep(10)
-    #delete_images()    
+        clock.tick(60)   
     return None
 
+
+#Initializes the Pygame display (Must be called again if the quit function is called)
 def screen_init():
     pygame.init()
     displayInfo = pygame.display.Info()
@@ -240,7 +247,8 @@ def screen_init():
     screen = pygame.display.set_mode((displayWidth, displayHeight),pygame.FULLSCREEN)
     return screen, displayWidth, displayHeight
     
-    
+
+#Creates the photo picking link and calls on generate_qr_code to do its namesake, then display the code and query until the photos are picked
 def new_selection(credentials, screen, screenWidth, screenHeight):
     session = create_session(credentials)
     id_value = session.get('id')
@@ -254,8 +262,7 @@ def new_selection(credentials, screen, screenWidth, screenHeight):
     codeDisplay = pygame.image.load("selectionQR.png")
     codeWidth, codeHeight = codeDisplay.get_size()
     codeDisplay = pygame.transform.scale(codeDisplay, (screenWidth, codeHeight-10))
-   
-   
+
    # codeDisplay = resize_image(codeDisplay, screenWidth, screenHeight)
     screen.blit(codeDisplay, (0, 120))
     pygame.display.flip()
@@ -271,6 +278,7 @@ def new_selection(credentials, screen, screenWidth, screenHeight):
     return None
 
 
+#Deletes the contents of the images folder
 def delete_images():
     for filename in os.listdir("images"):
         file_path = os.path.join("images", filename)
@@ -283,6 +291,7 @@ def delete_images():
             print(f"Error deleting {file_path}: {e}")
 
 
+#Main function, will display currently saved photos [if any] or will let you select new photos if none are found
 def photoView(credentials):
     screen, screenWidth, screenHeight = screen_init()
     images = [f for f in os.listdir('images') if f.endswith(('.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG', '.heic', '.HEIC'))]
@@ -292,13 +301,13 @@ def photoView(credentials):
        screen, screenWidth, screenHeight = screen_init()
        images = [f for f in os.listdir('images') if f.endswith(('.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG', '.heic', '.HEIC'))]
     display_images(images, screen, screenWidth, screenHeight)
-    #pygame.display.quit()
+    delete_images()
+    pygame.display.quit()
 
 
 
 if __name__ == '__main__':
     creds = authenticate_google_photos()
-    #delete_images()
     while True:
         photoView(creds)
 	
